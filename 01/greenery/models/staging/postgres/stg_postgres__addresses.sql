@@ -1,6 +1,6 @@
-SELECT address_id,
-       address,
+SELECT NULLIF(address_id, '') AS address_id,
+       NULLIF(address, '') AS address,
        TRY_TO_NUMBER(zipcode) AS zipcode,
-       state,
-       country
+       NULLIF(state, '') AS state,
+       NULLIF(country, '') AS country
 FROM {{ source('postgres', 'addresses') }}

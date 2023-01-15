@@ -1,4 +1,4 @@
-SELECT user_id,
+SELECT NULLIF(user_id, '') AS user_id,
        first_name,
        last_name,
        email,
