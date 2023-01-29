@@ -7,4 +7,4 @@ SELECT NULLIF(user_id, '') AS user_id,
        TRY_TO_TIMESTAMP(updated_at) AS updated_at,
        address_id
 
-FROM {{ source('postgres', 'users') }}
+FROM {{ source('postgres', 'users')}}
