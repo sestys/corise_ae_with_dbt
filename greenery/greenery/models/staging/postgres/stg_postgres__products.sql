@@ -1,5 +1,5 @@
 SELECT product_id,
-       name,
+       NULLIF(name, '') AS name,
        TRY_TO_DOUBLE(price) AS price,
        TRY_TO_NUMBER(inventory) AS inventory
 
